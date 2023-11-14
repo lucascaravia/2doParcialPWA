@@ -68,7 +68,7 @@ if ('serviceWorker' in navigator) {
                     navigator.share({
                         title: 'PWA APIS',
                         text: 'Ejemplo de api share ',
-                        url: 'https://mtg-finder.netlify.app/',
+                        url: 'rickymortyapipractica.netlify.app',
                     })
                         .then(function () {
                             console.log("Se compartió")
