@@ -12,7 +12,7 @@ self.addEventListener('install', function (event) {
                     cache.add('favoritos.html'),
                     cache.add('css/main.css'),
                     cache.add('assets/img/logo.png'),
-                    cache.add('assets/img/hero-home.jpeg'),
+                    cache.add('assets/img/hero-home.jpg'),
                     cache.add('assets/img/No-Image-Placeholder.png')
                 ]);
             })
