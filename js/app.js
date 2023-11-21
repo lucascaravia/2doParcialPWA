@@ -231,6 +231,6 @@ window.addEventListener('load', () => {
         }else if (route.includes('favoritos.html')) {
             showFavoritos();
         }else{
-            console.log('No hay ruta');
+            console.log('no estaria funcionando');
         }
 });
