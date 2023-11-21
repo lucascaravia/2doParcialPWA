@@ -5,16 +5,18 @@ self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open(cacheStatic)
             .then(function (cache) {
-                cache.addAll(
-                    [   '/index.html',
-                        '/favoritos.html',
-                        '/css/main.css',
-                        '/assets/img/logo.png',
-                        '/assets/img/hero-home.jpeg',
-                        '/assets/img/No-Image-Placeholder.png'
-                    ]
-                )
-            }));
+                // Agregar cada recurso por separado a la caché
+                return Promise.all([
+                    cache.add('estilos/estilos.css'),
+                    cache.add('index.html'),
+                    cache.add('favoritos.html'),
+                    cache.add('css/main.css'),
+                    cache.add('assets/img/logo.png'),
+                    cache.add('assets/img/hero-home.jpeg'),
+                    cache.add('assets/img/No-Image-Placeholder.png')
+                ]);
+            })
+    );
 });
 self.addEventListener('activate', function (event) {
     console.log('SW activado', event);
