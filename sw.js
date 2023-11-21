@@ -6,13 +6,12 @@ self.addEventListener('install', function (event) {
         caches.open(cacheStatic)
             .then(function (cache) {
                 cache.addAll(
-                    ['estilos/estilos.css',
-                        'index.html',
-                        'favoritos.html',
-                        'css/main.css',
-                        'assets/img/logo.png',
-                        'assets/img/hero-home.jpeg',
-                        'assets/img/No-Image-Placeholder.png'
+                    [   '/index.html',
+                        '/favoritos.html',
+                        '/css/main.css',
+                        '/assets/img/logo.png',
+                        '/assets/img/hero-home.jpeg',
+                        '/assets/img/No-Image-Placeholder.png'
                     ]
                 )
             }));
